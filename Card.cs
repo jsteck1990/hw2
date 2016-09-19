@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace hw2
 {
@@ -12,7 +11,7 @@ namespace hw2
 
 		private string rank;
 		private string suit;
-		private int CardValue;
+		private int CardValue;//for comparison
 
 		public Card(){
 			
