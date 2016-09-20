@@ -9,7 +9,7 @@ namespace hw2
 		public List<Card> CardDeck;
 		private List<Card> CardsDealt = new List<Card>();
 
-		private int DeckCount = 0;
+		private int DeckCount = 0;//saves value of full deck
 
 		public Deck ()
 		{
@@ -24,8 +24,9 @@ namespace hw2
 			Card CardDealt = new Card();
 			if(IsEmpty() == false)
 				CardDealt = CardDeck.First ();
-			CardDeck.Remove (CardDealt);
-			CardsDealt.Add (CardDealt);
+				CardDeck.Remove (CardDealt);
+				CardsDealt.Add (CardDealt);
+			
 			return CardDealt;
 		}
 
