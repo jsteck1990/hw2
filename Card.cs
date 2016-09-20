@@ -4,7 +4,7 @@ namespace hw2
 {
 	public class Card
 	{
-		public static Card card = new Card{suit = "", rank = "", CardValue = 0};
+		public static readonly Card card = new Card{suit = "", rank = "", CardValue = 0};
 
 		private Rank CardRank;
 		private Suit CardSuit;
@@ -22,8 +22,8 @@ namespace hw2
 			CardRank = r;
 			CardSuit = s;
 
-			suit = s.GetName();
-			rank = r.GetName();
+			suit = s.GetSymbol();
+			rank = r.GetSymbol();
 
 			CardValue = r.RankNum + s.SuitNum;
 		}
