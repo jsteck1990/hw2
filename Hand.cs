@@ -71,7 +71,7 @@ namespace hw2
 		abstract public int EvaluateHand ();
 
 		override public string ToString(){
-			string s = string.Join (" | ", PlayerHand);
+			string s = string.Join (" || ", PlayerHand);
 
 			return s;
 		}

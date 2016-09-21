@@ -41,10 +41,10 @@ namespace hw2
 				CCHand2.AddCard (CCDeck.DealOne ());
 
 
-				Console.WriteLine ("Hand 1: {0} | Score: {1}\n", CCHand1, CCHand1.EvaluateHand());
-				Console.WriteLine ("Hand 2: {0} | Score: {1}\n", CCHand2, CCHand2.EvaluateHand());
+			Console.WriteLine ("Hand 1: | {0} | Score: {1}\n", CCHand1, CCHand1.EvaluateHand());
+			Console.WriteLine ("Hand 2: | {0} | Score: {1}\n", CCHand2, CCHand2.EvaluateHand());
 
-			Console.WriteLine ("Cards Remaining: {0}", CCDeck.GetCardsRemaining ());
+			Console.WriteLine ("Cards Remaining: {0}\n", CCDeck.GetCardsRemaining ());
 
 		}
 	}
