@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace hw2
 {
 	public abstract class Hand
 	{
-		private List<Card> PlayerHand;
+		public List<Card> PlayerHand;
+
 		public Hand ()
 		{
 			PlayerHand = new List<Card> ();
 		}
 
 		public void AddCard(Card c){
+			PlayerHand.Add (c);
 		}
 
 		abstract public int CompareTo (Hand OtherHandObj);
@@ -70,9 +71,9 @@ namespace hw2
 		abstract public int EvaluateHand ();
 
 		override public string ToString(){
-			foreach(Card c in PlayerHand)
-				return String.Format("{0,4}", c);
-			return "";
+			string s = string.Join (" | ", PlayerHand);
+
+			return s;
 		}
 	}
 }

@@ -1,42 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace hw2
 {
 	public class CardCountHand : Hand
 	{
-		public List<Card> PlayerHand;
-		private static int HandValue;
+		private static int HandValue = 0;
+		private List<int> RankValues = new List<int>();
 
 		public CardCountHand ()
 		{
-			PlayerHand = new List<Card>();
 			
-			foreach (Card c in PlayerHand)
-				foreach (Rank r in Rank.VALUES)
-					if (r.RankNum == 9 || r.RankNum == 10 || r.RankNum == 11 || r.RankNum == 12)
-						HandValue += 10;
-					else if (r.RankNum == 1)
-						HandValue += 2;
-					else if (r.RankNum == 2)
-						HandValue += 3;
-					else if (r.RankNum == 3)
-						HandValue += 4;
-					else if (r.RankNum == 4)
-						HandValue += 5;
-					else if (r.RankNum == 5)
-						HandValue += 6;
-					else if (r.RankNum == 6)
-						HandValue += 7;
-					else if (r.RankNum == 7)
-						HandValue += 8;
-					else if (r.RankNum == 8)
-						HandValue += 9;
-					else
-						HandValue = 0;
 		}
 
-		public override int CompareTo(Hand OtherHandObj){
+		public override int CompareTo (Hand OtherHandObj)
+		{
 			Hand HandObj = (Hand)OtherHandObj;
 
 			if (this.EvaluateHand () < HandObj.EvaluateHand ())
@@ -47,9 +26,74 @@ namespace hw2
 				return 0;
 		}
 
-		public override int EvaluateHand(){
+		public override int EvaluateHand ()
+		{
+
+			foreach (Card c in PlayerHand) {
+				RankValues.Add (c.getRank ().RankNum);
+				
+//				switch (RankValue) {
+//				case "A":
+//					RankValue = "A";
+//					HandValue += 1;
+//					break;
+//				case "2":
+//					RankValue = "2";
+//					HandValue += 2;
+//					break;
+//				case "3":
+//					RankValue = "3";
+//					HandValue += 3;
+//					break;
+//				case "4":
+//					RankValue = "4";
+//					HandValue += 4;
+//					break;
+//				case "5":
+//					RankValue = "5";
+//					HandValue += 5;
+//					break;
+//				case "6":
+//					RankValue = "6";
+//					HandValue += 6;
+//					break;
+//				case "7":
+//					RankValue = "7";
+//					HandValue += 7;
+//					break;
+//				case "8":
+//					RankValue = "8";
+//					HandValue += 8;
+//					break;
+//				case "9":
+//					RankValue = "9";
+//					HandValue += 9;
+//					break;
+//				case "10":
+//					RankValue = "10";
+//					HandValue += 10;
+//					break;
+//				case "J":
+//					RankValue = "J";
+//					HandValue += 10;
+//					break;
+//				case "Q":
+//					RankValue = "Q";
+//					HandValue += 10;
+//					break;
+//				case "K":
+//					RankValue = "K";
+//					HandValue += 10;
+//					break;
+//				default:
+//					HandValue = 0;
+//					break;
+//				}
+			}
+			
 			return HandValue;
 		}
+
 	}
 }
 

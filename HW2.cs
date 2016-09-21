@@ -8,9 +8,8 @@ namespace hw2
 	{
 		public static void Main (string[] args)
 		{
-			CardCountGame CCG = new CardCountGame ();
-//			Deck d1 = new Deck ();
-//			Deck d2 = new Deck ();
+			Deck d1 = new Deck ();
+			Deck d2 = new Deck ();
 //			
 //			Card c1 = new Card (Suit.SPADES, Rank.ACE);
 //			Card c2 = new Card (Suit.DIAMONDS, Rank.TWO);
@@ -36,6 +35,11 @@ namespace hw2
 //			foreach (Suit s in Suit.VALUES)
 //				foreach (Rank r in Rank.VALUES)
 //					d1.AddCard (new Card (s, r));
+//
+//			d2.AddCard (d1.DealOne ());
+//
+//			foreach(Card c in d2.CardDeck)
+//			Console.WriteLine (c);
 //
 //			d1.Shuffle ();
 //
@@ -65,7 +69,7 @@ namespace hw2
 //			for(int i=0; i < 10; i++)
 //				Console.WriteLine(d2.DealOne ());
 
-			CCG.PlayGame();
+			CardCountGame.PlayGame();
 		}
 	}
 }

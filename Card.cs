@@ -11,7 +11,7 @@ namespace hw2
 
 		private string rank;
 		private string suit;
-		private int CardValue;//for comparison
+		public int CardValue;//for comparison
 
 		public Card(){
 			
@@ -48,7 +48,7 @@ namespace hw2
 		}
 
 		override public string ToString(){
-			return rank + " of " + suit;
+			return rank + suit;
 		}
 	
 	}
